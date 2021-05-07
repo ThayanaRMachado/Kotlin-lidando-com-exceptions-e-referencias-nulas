@@ -2,4 +2,5 @@ package br.com.alura.bytebank.exception
 
 import java.lang.Exception
 
-class SaldoInsuficienteException: Exception("Saldo insuficiente!")
+class SaldoInsuficienteException(
+    mensagem: String = "Saldo insuficiente!") : Exception(mensagem)
