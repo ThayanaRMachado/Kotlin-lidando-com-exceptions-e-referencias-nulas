@@ -7,7 +7,9 @@ import java.lang.ArithmeticException
 import java.lang.Exception
 
 fun main() {
-    var enderecoNulo: Endereco? = null
-    val enderecoNoaNulo: Endereco = enderecoNulo!!
-    enderecoNoaNulo.logradouro
+    var enderecoNulo: Endereco? = Endereco(logradouro = "rua Vergueiro")
+    val logradouroNovo: String? = enderecoNulo?.logradouro
+    enderecoNulo?.let { endereco: Endereco ->
+        println(endereco.logradouro.length)
+    }
 }
