@@ -15,6 +15,7 @@ fun funcao1(){
     try {
         funcao2()
     } catch (e: ClassCastException){
+        println(e.printStackTrace())
         println("ClassCastException foi pegada")
     }
     println("fim funcao1")
